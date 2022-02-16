@@ -2,6 +2,7 @@ package ir.homework.hw6problem2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import ir.homework.hw6problem2.databinding.ActivityMainBinding
 import java.util.zip.Inflater
@@ -19,13 +20,43 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btn1.setOnClickListener{
+            onClickButton(0, 0, binding.btn1)
+        }
+        binding.btn2.setOnClickListener{
+            onClickButton(0, 1, binding.btn2)
+        }
+        binding.btn3.setOnClickListener{
+            onClickButton(0, 2, binding.btn3)
+        }
+        binding.btn4.setOnClickListener{
+            onClickButton(1, 0, binding.btn4)
+        }
+        binding.btn5.setOnClickListener{
+            onClickButton(1, 1, binding.btn5)
+        }
+        binding.btn6.setOnClickListener{
+            onClickButton(1, 2, binding.btn6)
+        }
+        binding.btn7.setOnClickListener{
+            onClickButton(2, 0, binding.btn7)
+        }
+        binding.btn8.setOnClickListener{
+            onClickButton(2, 1, binding.btn8)
+        }
+        binding.btn9.setOnClickListener{
+            onClickButton(2, 2, binding.btn9)
+        }
     }
 
-    fun onClickButton(i: Int, j: Int){
-        count ++
-        arrValue[i][j] = if (count % 2 == 1)  Values.X    else    Values.O
-        if (isFinished(i, j)){
-            Toast.makeText(this,"finished",Toast.LENGTH_LONG)
+    fun onClickButton(i: Int, j: Int, button: Button){
+        if (winner == Winner.NOBODY && button.text == "") {
+            count++
+            button.text = if (count % 2 == 1) "X" else "O"
+            arrValue[i][j] = if (count % 2 == 1) Values.X else Values.O
+            if (isFinished(i, j)) {
+                Toast.makeText(this, "finished", Toast.LENGTH_LONG).show()
+            }
         }
     }
 
@@ -57,6 +88,7 @@ class MainActivity : AppCompatActivity() {
         }
         return false
     }
+
 }
 
 enum class Values{
