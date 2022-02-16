@@ -1,11 +1,11 @@
 package ir.homework.hw6problem2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import ir.homework.hw6problem2.databinding.ActivityMainBinding
-import java.util.zip.Inflater
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -19,6 +19,27 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnReset.setOnClickListener{
+            for (i in 0..2){
+                for (j in 0..2){
+                    arrValue[i][j] = Values.EMPTY
+                }
+            }
+            count = 0
+            winner = Winner.NOBODY
+
+            binding.btn1.text = ""
+            binding.btn2.text = ""
+            binding.btn3.text = ""
+            binding.btn4.text = ""
+            binding.btn5.text = ""
+            binding.btn6.text = ""
+            binding.btn7.text = ""
+            binding.btn8.text = ""
+            binding.btn9.text = ""
+            binding.tvWinner.text = ""
+        }
 
         binding.btn1.setOnClickListener{
             onClickButton(0, 0, binding.btn1)
@@ -55,7 +76,11 @@ class MainActivity : AppCompatActivity() {
             button.text = if (count % 2 == 1) "X" else "O"
             arrValue[i][j] = if (count % 2 == 1) Values.X else Values.O
             if (isFinished(i, j)) {
-                Toast.makeText(this, "finished", Toast.LENGTH_LONG).show()
+                binding.tvWinner.text = when(winner){
+                    Winner.X -> "Player " + winner.toString() + " winner"
+                    Winner.O -> "Player " + winner.toString() + " winner"
+                    else -> "Draw"
+                }
             }
         }
     }

@@ -3,141 +3,179 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:layout_centerInParent="false"
-    android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/pointfree"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        tools:text="winner" />
 
     <LinearLayout
+        android:id="@+id/layout_buttons"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:context=".MainActivity">
 
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:backgroundTint="#F1437E"
-            android:fontFamily="@font/pointfree"
-            android:textSize="34sp"
-            app:cornerRadius="5dp"
-            tools:text="Btn1" />
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="#F1437E"
-            android:fontFamily="@font/pointfree"
-            android:textSize="34sp"
-            app:cornerRadius="5dp"
-            tools:text="Btn2" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F1437E"
+                android:fontFamily="@font/pointfree"
+                android:textSize="34sp"
+                app:cornerRadius="5dp"
+                tools:text="Btn1" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F1437E"
+                android:fontFamily="@font/pointfree"
+                android:textSize="34sp"
+                app:cornerRadius="5dp"
+                tools:text="Btn2" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F1437E"
+                android:fontFamily="@font/pointfree"
+                android:textSize="34sp"
+                app:cornerRadius="5dp"
+                tools:text="Btn3" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:backgroundTint="#F1437E"
-            android:fontFamily="@font/pointfree"
-            android:textSize="34sp"
-            app:cornerRadius="5dp"
-            tools:text="Btn3" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F1437E"
+                android:fontFamily="@font/pointfree"
+                android:textSize="34sp"
+                app:cornerRadius="5dp"
+                tools:text="Btn4" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F1437E"
+                android:fontFamily="@font/pointfree"
+                android:textSize="34sp"
+                app:cornerRadius="5dp"
+                tools:text="Btn5" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F1437E"
+                android:fontFamily="@font/pointfree"
+                android:textSize="34sp"
+                app:cornerRadius="5dp"
+                tools:text="Btn6" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F1437E"
+                android:fontFamily="@font/pointfree"
+                android:textSize="34sp"
+                app:cornerRadius="5dp"
+                tools:text="Btn7" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F1437E"
+                android:fontFamily="@font/pointfree"
+                android:textSize="34sp"
+                app:cornerRadius="5dp"
+                tools:text="Btn8" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F1437E"
+                android:fontFamily="@font/pointfree"
+                android:textSize="34sp"
+                app:cornerRadius="5dp"
+                tools:text="Btn9" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="#F1437E"
-            android:fontFamily="@font/pointfree"
-            android:textSize="34sp"
-            app:cornerRadius="5dp"
-            tools:text="Btn4" />
-        <Button
-            android:id="@+id/btn5"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="#F1437E"
-            android:fontFamily="@font/pointfree"
-            android:textSize="34sp"
-            app:cornerRadius="5dp"
-            tools:text="Btn5" />
-
-        <Button
-            android:id="@+id/btn6"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="#F1437E"
-            android:fontFamily="@font/pointfree"
-            android:textSize="34sp"
-            app:cornerRadius="5dp"
-            tools:text="Btn6" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn7"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="#F1437E"
-            android:fontFamily="@font/pointfree"
-            android:textSize="34sp"
-            app:cornerRadius="5dp"
-            tools:text="Btn7" />
-        <Button
-            android:id="@+id/btn8"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="#F1437E"
-            android:fontFamily="@font/pointfree"
-            android:textSize="34sp"
-            app:cornerRadius="5dp"
-            tools:text="Btn8" />
-
-        <Button
-            android:id="@+id/btn9"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="#F1437E"
-            android:fontFamily="@font/pointfree"
-            android:textSize="34sp"
-            app:cornerRadius="5dp"
-            tools:text="Btn9" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#3F51B5"
+        android:fontFamily="@font/pointfree"
+        android:gravity="center"
+        android:text="RESET"
+        android:textSize="34sp" />
 
 </LinearLayout>
